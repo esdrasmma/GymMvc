@@ -54,7 +54,7 @@ namespace GymMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome")] Instructor instructor)
+        public async Task<IActionResult> Create([Bind("Id,Nome,CPF,Email,Telefone")] Instructor instructor)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace GymMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome")] Instructor instructor)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CPF,Email,Telefone")] Instructor instructor)
         {
             if (id != instructor.Id)
             {
