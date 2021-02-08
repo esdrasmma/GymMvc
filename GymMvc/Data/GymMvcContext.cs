@@ -14,6 +14,11 @@ namespace GymMvc.Data
         {
         }
 
-        public DbSet<GymMvc.Models.Instructor> Instructor { get; set; }
+        public DbSet<Instructor> Instructor { get; set; }
+        public DbSet<Payment> Payment { get; set; }
+        public DbSet<Modality> Modality { get; set; }
+        public DbSet<Membership> Membership { get; set; }
+
+
     }
 }

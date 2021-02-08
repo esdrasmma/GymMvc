@@ -5,24 +5,27 @@ using System.Threading.Tasks;
 
 namespace GymMvc.Models
 {
-    public class Instructor
+    public class Membership
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
         public string CPF { get; set; }
+        public string Nome { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public ICollection<Modality> Modalities { get; set; } = new List<Modality>();
+        public DateTime DataNascimento { get; set; }
 
-        public Instructor() { }
+        public ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
-        public Instructor(int id, string nome, string cPF, string email, string telefone)
+        public Membership() { }
+
+        public Membership(int id, string cPF, string nome, string email, string telefone, DateTime dataNascimento)
         {
             Id = id;
-            Nome = nome;
             CPF = cPF;
+            Nome = nome;
             Email = email;
             Telefone = telefone;
+            DataNascimento = dataNascimento;
         }
     }
 }
